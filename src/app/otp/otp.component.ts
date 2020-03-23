@@ -9,11 +9,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./otp.component.css']
 })
 export class OtpComponent implements OnInit {
-	otpForm: formGroup;
+	confForm: FormGroup;
     loading = false;
     submitted = false;
     returnUrl: string;
-
+    succes_msg = "";
   	constructor(private data: DataService,private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router) { }

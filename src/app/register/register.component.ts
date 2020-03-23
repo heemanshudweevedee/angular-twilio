@@ -10,10 +10,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-	loginForm: formGroup;
+	loginForm: FormGroup;
     loading = false;
     submitted = false;
     returnUrl: string;
+    msgs = "";
     constructor(private data: DataService,private formBuilder: FormBuilder,private router: Router,private alertService: AlertService){}
 
   ngOnInit(): void {
@@ -26,7 +27,7 @@ export class RegisterComponent implements OnInit {
 
 	get f() { return this.loginForm.controls; }
     onSubmit() {
-	 	console.log("111111")
+	 	    
         this.submitted = true;
         let user = {"password":"123"};
         user["email"] = this.f.email.value

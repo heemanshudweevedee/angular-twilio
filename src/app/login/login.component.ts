@@ -9,10 +9,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-	otpForm: formGroup;
+	otpForm: FormGroup;
     loading = false;
     submitted = false;
     returnUrl: string;
+    msg = "";
+    contact = "";
 
   constructor(private data: DataService,private formBuilder: FormBuilder,
         private route: ActivatedRoute,
