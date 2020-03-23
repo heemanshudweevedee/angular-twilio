@@ -1,0 +1,12 @@
+<h2>Submit OTP</h2>
+<h1>{{succes_msg}}</h1>
+<form [formGroup]="confForm" (ngSubmit)="submitotp()">
+    <div class="form-group">
+        <label for="username">Otp</label>
+        <input type="text" formControlName="otp" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.otp.errors }" />
+        {{contact}}
+        
+    </div>
+    <button [disabled]="loading" class="btn btn-primary" >submit</button>
+    
+</form>
